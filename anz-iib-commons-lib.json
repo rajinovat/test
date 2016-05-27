@@ -1,0 +1,394 @@
+{
+    "name": "anz-iib-commons-lib",
+    "description": "",
+    "created": 1463656033959,
+    "componentType": "STANDARD",
+    "ignoreQualifiers": 0,
+    "importAutomatically": true,
+    "useVfs": true,
+    "active": true,
+    "deleted": false,
+    "defaultVersionType": "FULL",
+    "cleanupDaysToKeep": 0,
+    "cleanupCountToKeep": 0,
+    "sourceConfigPluginName": "Maven",
+    "envPropDefs": [],
+    "resPropDefs": [],
+    "versionPropDefs": [],
+    "propSheetGroup": {"propSheets": [
+        {
+            "name": "template",
+            "properties": []
+        },
+        {
+            "name": "custom",
+            "properties": []
+        },
+        {
+            "name": "MavenComponentProperties",
+            "properties": [
+                {
+                    "name": "artifactId",
+                    "value": "anz-iib-commons-lib-package",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "copyCount",
+                    "value": "1",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "extension",
+                    "value": "zip",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "extensions",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "groupId",
+                    "value": "com.anz",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "password",
+                    "value": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyi79n|kOg3mek2z7Ste9TupaMaCw==|NKOVAE3K5sQBnb8fVa4Nzg==}",
+                    "description": "",
+                    "secure": true
+                },
+                {
+                    "name": "proxyHost",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "proxyPassword",
+                    "value": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyi79n|TkfI3rz5JD86yJrNNiHFgA==|8rIZeBiOLFGx7UKucJBxOQ==}",
+                    "description": "",
+                    "secure": true
+                },
+                {
+                    "name": "proxyPort",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "proxyUsername",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "qualifier",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "repoUrl",
+                    "value": "http:\/\/10.52.36.22:8081\/artifactory\/ext-release-local\/",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "saveFileExecuteBits",
+                    "value": "false",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "user",
+                    "value": "admin",
+                    "description": "",
+                    "secure": false
+                },
+                {
+                    "name": "versionPattern",
+                    "description": "",
+                    "secure": false
+                }
+            ]
+        }
+    ]},
+    "processes": [{
+        "name": "Deploy",
+        "description": "",
+        "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+        "takesVersion": true,
+        "inventoryActionType": "ADD",
+        "status": "Active",
+        "configActionType": "ADD",
+        "active": true,
+        "path": "components\/5fce1233-e3a0-492e-8106-d6e62720c1cd\/processes\/7746b4bc-9712-475e-8581-ab1347c28ec3",
+        "propDefs": [],
+        "rootActivity": {
+            "edges": [
+                {
+                    "to": "Unzip",
+                    "from": "cf11e8e6e681ff6484f5fe344e339d",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "Download iib-commons",
+                    "type": "ALWAYS",
+                    "value": ""
+                },
+                {
+                    "to": "Approve to Continue when Stop process fails",
+                    "from": "Stop Integration Apps in Sequence",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "Deploy Bar Files In Sequence",
+                    "from": "Approve to Continue when Stop process fails",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "1661da84e013e2d6adc5a70243d09c",
+                    "from": "Start Integration Apps in sequence",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "bc9e7bc71687114c9a710d66aa3309",
+                    "from": "1661da84e013e2d6adc5a70243d09c",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "cf11e8e6e681ff6484f5fe344e339d",
+                    "from": "Download iib-commons",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "Stop Integration Apps in Sequence",
+                    "from": "Unzip",
+                    "type": "SUCCESS",
+                    "value": ""
+                },
+                {
+                    "to": "Start Integration Apps in sequence",
+                    "from": "Deploy Bar Files In Sequence",
+                    "type": "SUCCESS",
+                    "value": ""
+                }
+            ],
+            "offsets": [
+                {
+                    "name": "1661da84e013e2d6adc5a70243d09c",
+                    "x": -250,
+                    "y": 550,
+                    "h": 50,
+                    "w": 290
+                },
+                {
+                    "name": "Approve to Continue when Stop process fails",
+                    "x": 78.82000732421875,
+                    "y": 283.9100036621094,
+                    "h": 50,
+                    "w": 390
+                },
+                {
+                    "name": "Stop Integration Apps in Sequence",
+                    "x": -48,
+                    "y": 215,
+                    "h": 50,
+                    "w": 320
+                },
+                {
+                    "name": "Start Integration Apps in sequence",
+                    "x": -55,
+                    "y": 430,
+                    "h": 50,
+                    "w": 320
+                },
+                {
+                    "name": "Unzip",
+                    "x": 187,
+                    "y": 155,
+                    "h": 50,
+                    "w": 170
+                },
+                {
+                    "name": "cf11e8e6e681ff6484f5fe344e339d",
+                    "x": -229.99999999999994,
+                    "y": 130,
+                    "h": 50,
+                    "w": 280
+                },
+                {
+                    "name": "bc9e7bc71687114c9a710d66aa3309",
+                    "x": -134.99999999999994,
+                    "y": 660,
+                    "h": 50,
+                    "w": 90
+                },
+                {
+                    "name": "Download iib-commons",
+                    "x": 40,
+                    "y": 70,
+                    "h": 50,
+                    "w": 340
+                },
+                {
+                    "name": "Deploy Bar Files In Sequence",
+                    "x": -45,
+                    "y": 360,
+                    "h": 50,
+                    "w": 300
+                }
+            ],
+            "type": "graph",
+            "name": "68057d3c-b7a6-4e61-bea8-792dd57752a8",
+            "children": [
+                {
+                    "type": "finish",
+                    "name": "bc9e7bc71687114c9a710d66aa3309",
+                    "children": []
+                },
+                {
+                    "allowFailure": false,
+                    "useImpersonation": false,
+                    "showHidden": false,
+                    "impersonationUseSudo": false,
+                    "commandName": "Download Artifacts",
+                    "pluginName": "IBM UrbanCode Deploy Versioned File Storage",
+                    "pluginVersion": 26,
+                    "properties": {
+                        "directoryOffset": ".",
+                        "artifactSetBaseDir": "",
+                        "fileIncludePatterns": "**\/*",
+                        "fileExcludePatterns": "",
+                        "syncMode": "true",
+                        "fullVerification": "true",
+                        "setFileExecuteBits": "false",
+                        "verifyFileIntegrity": "false",
+                        "versionId": "${p:version.id}",
+                        "serverUrl": "${p:server.url}",
+                        "compId": "${p:component.id}",
+                        "resId": "${p:resource.id}",
+                        "charset": "",
+                        "label": ""
+                    },
+                    "type": "plugin",
+                    "name": "Download iib-commons",
+                    "children": []
+                },
+                {
+                    "allowFailure": false,
+                    "useImpersonation": false,
+                    "showHidden": false,
+                    "impersonationUseSudo": false,
+                    "commandName": "Shell",
+                    "pluginName": "Shell",
+                    "pluginVersion": 6,
+                    "properties": {
+                        "directoryOffset": ".",
+                        "shellInterpreter": "",
+                        "scriptBody": "chmod 755 install.sh\nwhile read bar\ndo\n#Invoking install.sh deploy command\nsh install.sh -e \"${p:iib_server_name}\" -k \"$bar\" -b \"${p:iib_node_name}\" -c \"deploy\" -v \"${p:version.name}\"\ndone < bom.csv\n",
+                        "runAsDaemon": "false",
+                        "outputFile": ""
+                    },
+                    "type": "plugin",
+                    "name": "Deploy Bar Files In Sequence",
+                    "children": []
+                },
+                {
+                    "allowFailure": false,
+                    "useImpersonation": false,
+                    "showHidden": false,
+                    "impersonationUseSudo": false,
+                    "commandName": "Shell",
+                    "pluginName": "Shell",
+                    "pluginVersion": 6,
+                    "properties": {
+                        "directoryOffset": ".",
+                        "shellInterpreter": "",
+                        "scriptBody": "chmod 755 install.sh\nwhile read bar\ndo\n#Invoke  install.sh stop command\nsh install.sh -e \"${p:iib_server_name}\" -k \"$bar\" -b \"${p:iib_node_name}\" -c \"stop\" -v \"${p:version.name}\"\ndone < bom.csv\n",
+                        "runAsDaemon": "false",
+                        "outputFile": ""
+                    },
+                    "type": "plugin",
+                    "name": "Stop Integration Apps in Sequence",
+                    "children": []
+                },
+                {
+                    "allowFailure": false,
+                    "useImpersonation": false,
+                    "showHidden": false,
+                    "impersonationUseSudo": false,
+                    "commandName": "Shell",
+                    "pluginName": "Shell",
+                    "pluginVersion": 6,
+                    "properties": {
+                        "directoryOffset": ".",
+                        "shellInterpreter": "",
+                        "scriptBody": "chmod 755 install.sh\nwhile read bar\ndo\n#Invoke install.sh stop command\nsh install.sh -e \"${p:iib_server_name}\" -k \"$bar\" -b \"${p:iib_node_name}\" -c \"start\" -v \"${p:version.name}\"\ndone < bom.csv",
+                        "runAsDaemon": "false",
+                        "outputFile": ""
+                    },
+                    "type": "plugin",
+                    "name": "Start Integration Apps in sequence",
+                    "children": []
+                },
+                {
+                    "allowFailure": false,
+                    "useImpersonation": false,
+                    "showHidden": false,
+                    "impersonationUseSudo": false,
+                    "commandName": "Shell",
+                    "pluginName": "Shell",
+                    "pluginVersion": 6,
+                    "properties": {
+                        "directoryOffset": ".",
+                        "shellInterpreter": "",
+                        "scriptBody": "unzip -o \"${p:component.name}-package-${p:version.name}.zip\"",
+                        "runAsDaemon": "false",
+                        "outputFile": ""
+                    },
+                    "type": "plugin",
+                    "name": "Unzip",
+                    "children": []
+                },
+                {
+                    "lockName": "${p:component.name}-${p:componentProcess.name}-${p:resource.name}",
+                    "type": "acquireLock",
+                    "name": "cf11e8e6e681ff6484f5fe344e339d",
+                    "children": []
+                },
+                {
+                    "lockName": "${p:component.name}-${p:componentProcess.name}-${p:resource.name}",
+                    "type": "releaseLock",
+                    "name": "1661da84e013e2d6adc5a70243d09c",
+                    "children": []
+                },
+                {
+                    "templateName": "GenericProcessFailure",
+                    "roleRestrictionData": {"roleRestrictions": []},
+                    "propDefs": [],
+                    "type": "componentManualTask",
+                    "name": "Approve to Continue when Stop process fails",
+                    "children": []
+                }
+            ]
+        }
+    }],
+    "configTemplates": [],
+    "genericProcesses": [],
+    "teamMappings": [],
+    "tags": [{
+        "id": "7cbde2aa-84a8-48b1-9b85-ebb8f7f20d70",
+        "name": "iib-commons",
+        "color": "#7F1C7D",
+        "description": "",
+        "objectType": "Component"
+    }]
+}
