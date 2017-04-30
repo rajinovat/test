@@ -1,0 +1,1 @@
+Release drop folder. This folder will be used by CARA as the download location

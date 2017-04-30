@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.westpac.ngs</groupId>
+	<artifactId>devops-tools</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${basedir}/assembly/package.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>IBM-1F120123H-releases</name>
+			<url>https://artifactory.srv.westpac.com.au/artifactory/O4001_NGS/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>IBM-1F120123H-snapshots</name>
+			<url>https://artifactory.srv.westpac.com.au/artifactory/O4001_NGS/</url>
+		</snapshotRepository>
+</distributionManagement>
+</project>

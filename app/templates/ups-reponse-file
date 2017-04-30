@@ -1,0 +1,151 @@
+$VAR1 = {
+          'system' => {
+                        'internal.installation.type' => {
+                                                          'save' => 1,
+                                                          'value' => 'First_time_full_installation_of_UPF'
+                                                        }
+                      },
+          'user' => {
+                      'config.async.replication.mode' => {
+                                                           'value' => 'no'
+                                                         },
+                      'config.database.liboranat.ldBinary' => {
+                                                                'value' => '/usr/bin/ld'
+                                                              },
+                      'config.database.offload.enableOracleTDE' => {
+                                                                     'value' => 'no'
+                                                                   },
+                      'config.database.offload.enablePartitioning' => {
+                                                                        'value' => 'yes'
+                                                                      },
+                      'config.database.oracle.homeDir' => {
+                                                            'value' => '/opt/oracle/instantclient_12_1'
+                                                          },
+                      'config.database.oracle.jdbcJar' => {
+                                                            'value' => '/opt/oracle/instantclient_12_1/ojdbc7.jar'
+                                                          },
+                      'config.database.oracle.libDir' => {
+                                                           'value' => '/opt/oracle/instantclient_12_1'
+                                                         },
+                      'config.database.technology' => {
+                                                        'value' => 'OracleJNI'
+                                                      },
+                      'config.installation.mode' => {
+                                                      'value' => 'Standalone'
+                                                    },
+                      'config.integration.options.mq' => {
+                                                           'value' => 'yes'
+                                                         },
+                      'config.java.homeDir' => {
+                                                 'value' => '/usr/java/jdk1.8.0_77'
+                                               },
+                      'config.java.maxMemory' => {
+                                                   'value' => '#MAX_MEMORY#'
+                                                 },
+                      'config.license_agreement.agreed' => {
+                                                             'value' => 'yes'
+                                                           },
+                      'config.mq.home' => {
+                                            'value' => '/opt/mqm'
+                                          },
+                      'config.platform.databaseTablespaceName' => {
+                                                                    'value' => 'LOG'
+                                                                  },
+                      'config.platform.enableMultiProcess' => {
+                                                                'value' => 'no'
+                                                              },
+                      'config.platform.enableOracleTDE' => {
+                                                             'value' => 'no'
+                                                           },
+                      'config.platform.enablePartitioning' => {
+                                                                'value' => 'yes'
+                                                              },
+                      'config.platform.installationDirectory' => {
+                                                                   'value' => '/opt/aci/UPF/Switch'
+                                                                 },
+                      'config.platform.logDirectory' => {
+                                                          'value' => '/opt/aci/UPF/log'
+                                                        },
+                      'config.platform.logrotate.configuration.deletion' => {
+                                                                              'value' => 'yes'
+                                                                            },
+                      'config.platform.logrotate.configuration.retentionPeriod' => {
+                                                                                     'value' => '30'
+                                                                                   },
+                      'config.platform.mcasPassword' => {},
+                      'config.platform.numberOfProcess' => {},
+                      'config.platform.numberOfSites' => {
+                                                           'value' => 1
+                                                         },
+                      'config.platform.platformId' => {
+                                                        'value' => 'UPF'
+                                                      },
+                      'config.platform.platformInstanceNumber' => {
+                                                                    'value' => '1'
+                                                                  },
+                      'config.platform.switchInstance' => {
+                                                            'value' => 1
+                                                          },
+                      'config.site.1.database.1.clean' => {
+                                                            'value' => 'yes'
+                                                          },
+                      'config.site.1.database.1.hostname' => {
+                                                               'value' => '#DB_HOST#'
+                                                             },
+                      'config.site.1.database.1.password' => {'value' => '#DB_PASSWORD#'},
+                      'config.site.1.database.1.port' => {
+                                                           'value' => '#DB_PORT#'
+                                                         },
+                      'config.site.1.database.1.sid' => {
+                                                          'value' => '#DB_SID#'
+                                                        },
+                      'config.site.1.database.1.username' => {
+                                                               'value' => '#DB_USER#'
+                                                             },
+                      'config.site.1.harouter.1.harType' => {
+                                                              'value' => '#HAR_TYPE#'
+                                                            },
+                      'config.site.1.harouter.1.hostname' => {
+                                                               'value' => '#HAR_HOST#'
+                                                             },
+                      'config.site.1.harouter.1.port' => {
+                                                           'value' => #HAR_PORT#
+                                                         },
+                      'config.site.1.isolation.1.hostname' => {
+                                                                'value' => '#ISOLATION_HOST#'
+                                                              },
+                      'config.site.1.location' => {
+                                                    'value' => '#ISOLATION_LOCATION#'
+                                                  },
+                      'config.site.1.numberOfDatabases' => {
+                                                             'value' => #NO_OF_DBS#
+                                                           },
+                      'config.site.1.numberOfHARouters' => {
+                                                             'value' => #NO_OF_HARS#
+                                                           },
+                      'config.site.1.numberOfIsolationHosts' => {
+                                                                  'value' => #NO_OF_ISOLATIONS#
+                                                                },
+                      'config.site.1.numberOfSwitches' => {
+                                                            'value' => #NO_OF_SWITCHES#
+                                                          },
+                      'config.site.1.switch.1.hostname' => {
+                                                             'value' => '#SWITCH_HOST#'
+                                                           },
+                      'config.site.1.switch.1.isbPortbase' => {
+                                                                'value' => #SWITCH_ISB_BASE_PORT#
+                                                              },
+                      'config.site.1.switch.1.portOffset' => {
+                                                               'value' => #SWITCH_OFFSET_PORT#
+                                                             },
+                      'config.site.1.switch.1.portbase' => {
+                                                             'value' => #SWITCH_BASE_PORT#
+                                                           },
+                      'config.timezone.zone' => {
+                                                  'value' => '#CONFIG_TIME_ZONE#'
+                                                },
+                      'config.webservices.host' => {},
+                      'config.webservices.interface' => {},
+                      'config.webservices.port' => {}
+                    }
+        };
